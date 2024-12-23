@@ -1,0 +1,12 @@
+<Module>
+    <Name value="BetterMPHealth"/>
+    <Id value="BetterMPHealth"/>
+    <Version value="v1.0.0"/>
+    <ModuleCategory value="MultiplayerOptional"/>    <SubModules>
+        <SubModule>
+            <Name value="BetterMPHealth"/>
+            <DLLName value="BetterMPHealth.dll"/>
+            <SubModuleClassType value="BetterMPHealth.BetterMPHealthSubModule"/>
+        </SubModule>
+    </SubModules>
+</Module>

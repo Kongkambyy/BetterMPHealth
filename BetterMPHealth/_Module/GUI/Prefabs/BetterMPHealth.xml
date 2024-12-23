@@ -1,0 +1,23 @@
+﻿<!-- BetterMPHealth.xml -->
+<Prefab>
+    <Window>
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+            <Children>
+                <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="75"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            PositionYOffset="-116" PositionXOffset="-155"
+                            Text="@PlayerHealth" Brush="BetterMPHealthBrush"/>
+
+                <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="50"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            PositionYOffset="-141" PositionXOffset="-150"
+                            Text="@ShieldHealth" Brush="BetterMPHealthBrush"/>
+
+                <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="50"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            PositionYOffset="-92" PositionXOffset="-150"
+                            Text="@MountHealth" Brush="BetterMPHealthBrush"/>
+            </Children>
+        </Widget>
+    </Window>
+</Prefab>
