@@ -82,3 +82,4 @@ C:\Users\Joachim Kamby\RiderProjects\BetterMPHealth\BetterMPHealth\obj\Debug\net
 C:\Users\Joachim Kamby\RiderProjects\BetterMPHealth\BetterMPHealth\obj\Debug\net8.0\refint\BetterMPHealth.dll
 C:\Users\Joachim Kamby\RiderProjects\BetterMPHealth\BetterMPHealth\obj\Debug\net8.0\BetterMPHealth.pdb
 C:\Users\Joachim Kamby\RiderProjects\BetterMPHealth\BetterMPHealth\obj\Debug\net8.0\ref\BetterMPHealth.dll
+C:\Users\Joachim Kamby\RiderProjects\BetterMPHealth\BetterMPHealth\obj\Debug\net8.0\BetterMPHealth.sourcelink.json

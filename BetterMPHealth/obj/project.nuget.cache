@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "u5CRXzHbxQY=",
+  "dgSpecHash": "UioT1hYB/vg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Joachim Kamby\\RiderProjects\\BetterMPHealth\\BetterMPHealth\\BetterMPHealth.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Joachim Kamby\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Joachim Kamby\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
