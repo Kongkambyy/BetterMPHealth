@@ -1,7 +1,8 @@
 ﻿using TaleWorlds.MountAndBlade;
 
 namespace BetterMPHealth {
-    public class BetterMPHealthSubModule : MBSubModuleBase {
+    public class BetterMPHealthSubModule : MBSubModuleBase 
+    {
         protected override void OnSubModuleLoad() {
             base.OnSubModuleLoad();
         }
