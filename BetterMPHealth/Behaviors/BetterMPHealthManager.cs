@@ -12,9 +12,13 @@ namespace BetterMPHealth
         private GauntletLayer? layer;
         private BetterMPHealthVM? dataSource;
 
+        private Agent _mainAgent;
+        private Agent _mountAgent;
+        private MissionWeapon? _shieldWeapon;
+
         public override void OnMissionScreenInitialize()
         {
-            base.OnMissionScreenInitialize();
+            base.OnBehaviorInitialize();
 
             layer = new GauntletLayer(49, "GauntletLayer");
             dataSource = new BetterMPHealthVM();
@@ -23,10 +27,70 @@ namespace BetterMPHealth
             MissionScreen.AddLayer(layer);
         }
 
+
         public override void OnMissionScreenTick(float dt)
         {
             base.OnMissionScreenTick(dt);
-            // Rest of the method implementation
+
+            if (dataSource != null)
+            {
+                _mainAgent = Mission.Current.MainAgent;
+                if (_mainAgent == null || !_mainAgent.IsActive())
+                {
+                    dataSource.PlayerHealth = "";
+                    dataSource.MountHealth = "";
+                    dataSource.ShieldHealth = "";
+                    return;
+                }
+
+                _mountAgent = _mainAgent.MountAgent;
+                _shieldWeapon = _mainAgent.WieldedOffhandWeapon;
+
+                dataSource.PlayerHealth = GetHealthDisplay(_mainAgent, true);
+                dataSource.MountHealth = GetMountHealthDisplay(_mountAgent);
+                dataSource.ShieldHealth = PlayerShieldDisplay();
+            }
+        }
+        
+        private string GetHealthDisplay(Agent agent, bool percent)
+        {
+            if (agent != null)
+            {
+                if (percent)
+                {
+                    return Math.Floor(agent.Health / agent.HealthLimit * 100) + "";
+                }
+
+                return Math.Round(agent.Health) + "/" + Math.Round(agent.HealthLimit);
+            }
+
+            return "";
+        }
+
+        private string PlayerShieldDisplay()
+        {
+            if (Mission.Current.MainAgent.WieldedOffhandWeapon.IsShield())
+            {
+                float hitpoints = (float)Mission.Current.MainAgent.WieldedOffhandWeapon.HitPoints;
+                float maxHitpoints = (float)Mission.Current.MainAgent.WieldedOffhandWeapon.ModifiedMaxHitPoints;
+
+                return Math.Round(hitpoints) + "/" + Math.Round(maxHitpoints);
+            }
+            else
+            {
+                return "";
+            }
+        }
+        
+
+        private string GetMountHealthDisplay(Agent mountAgent)
+        {
+            if (mountAgent != null)
+            {
+                return Math.Round(mountAgent.Health) + "/" + Math.Round(mountAgent.HealthLimit);
+            }
+
+            return "";
         }
 
         public override void OnMissionScreenFinalize()

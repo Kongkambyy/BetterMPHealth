@@ -1,11 +1,11 @@
-﻿<!-- BetterMPHealth.xml -->
+<!-- BetterMPHealth.xml -->
 <Prefab>
     <Window>
         <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
             <Children>
                 <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="75"
                             HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                            PositionYOffset="-116" PositionXOffset="-155"
+                            PositionYOffset="-116" PositionXOffset="-150"
                             Text="@PlayerHealth" Brush="BetterMPHealthBrush"/>
 
                 <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="50"

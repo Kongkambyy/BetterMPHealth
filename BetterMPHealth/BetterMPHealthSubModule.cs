@@ -9,7 +9,6 @@ namespace BetterMPHealth {
 
         public override void OnMissionBehaviorInitialize(Mission mission) {
             base.OnMissionBehaviorInitialize(mission);
-            mission.AddMissionBehavior(new BetterMPHealthManager());
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿<!-- BetterMPHealthBrushes.xml -->
+<!-- BetterMPHealthBrushes.xml -->
 <Brushes>
     <Brush Name="BetterMPHealthBrush">
         <Styles>
-            <Style Name="Default" FontColor="#FFFFFFFF" FontSize="16"/>
+            <Style Name="Default" FontColor="#FFFFFFFF" FontSize="20"/>
         </Styles>
     </Brush>
 </Brushes>
